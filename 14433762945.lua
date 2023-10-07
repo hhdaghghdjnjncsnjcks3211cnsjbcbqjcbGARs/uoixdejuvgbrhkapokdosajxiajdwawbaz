@@ -8,8 +8,8 @@ local Version = "0.1"
 
 local Window = Fluent:CreateWindow({
     Title = "Sapphire Hub | " .. productInfo.Name.. " ".. Version,
-    SubTitle = "by dawid",
-    TabWidth = 160,
+    SubTitle = "by Sapphire", -- Made by saintfulls
+    TabWidth = 120,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
     Theme = "Dark",
@@ -28,3 +28,11 @@ local Options = Fluent.Options
 do
     
 end
+
+SaveManager:SetLibrary(Fluent)
+InterfaceManager:SetLibrary(Fluent)
+InterfaceManager:SetFolder("Sapphire")
+SaveManager:SetFolder("Sapphire/".. game.PlaceId)
+InterfaceManager:BuildInterfaceSection(Tabs.Settings)
+SaveManager:BuildConfigSection(Tabs.Settings)
+SaveManager:LoadAutoloadConfig()
